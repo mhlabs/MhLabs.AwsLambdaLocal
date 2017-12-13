@@ -14,3 +14,4 @@ Helper method to map AWS Lambda environment variables to local variables. Used t
 ```
 LambdaEnvironment.MapToLocal(Region.Current).Wait();
 ```
+3. Hit F5
