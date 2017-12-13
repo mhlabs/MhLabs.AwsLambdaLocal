@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="awssdk.cloudformation" Version="3.3.9" />
+    <PackageReference Include="awssdk.lambda" Version="3.3.10" />
+    <PackageReference Include="microsoft.aspnetcore.hosting.abstractions" Version="1.1.3" />
+  </ItemGroup>
+
+</Project>
