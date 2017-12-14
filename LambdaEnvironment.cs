@@ -23,7 +23,7 @@ namespace MhLabs.AwsLambdaLocal
             var resources =
                 await cloudFormation.DescribeStackResourcesAsync(
                     new DescribeStackResourcesRequest { StackName = stackName });
-            var apiProxyLambda = resources.StackResources.FirstOrDefault(p => p.LogicalResourceId == "ApiProxy")?.PhysicalResourceId;
+            var apiProxyLambda = resources.StackResources.FirstOrDefault(p => p.LogicalResourceId == apiProxyLogicalId)?.PhysicalResourceId;
             var lambdaFunction = await lambdaClient.GetFunctionAsync(new GetFunctionRequest { FunctionName = apiProxyLambda });
             foreach (var entry in lambdaFunction.Configuration.Environment.Variables)
             {
