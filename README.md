@@ -12,6 +12,6 @@ Helper method to map AWS Lambda environment variables to local variables. Used t
 1. `Install-Package MhLabs.AwsLambdaLocal`
 2. In LocalEntryPoint.cs add this before `var host = new WebHostBuilder()`:
 ```
-LambdaEnvironment.MapToLocal(Region.Current).Wait();
+LambdaEnvironment.MapToLocal(<<The region endpoint you're targeting, i.e RegionEndpoint.EUWest1>>).Wait();
 ```
 3. Hit F5
