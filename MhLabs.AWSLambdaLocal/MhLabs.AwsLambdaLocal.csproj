@@ -8,6 +8,7 @@
   <ItemGroup>
     <PackageReference Include="awssdk.cloudformation" Version="3.3.9" />
     <PackageReference Include="awssdk.lambda" Version="3.3.10" />
+    <PackageReference Include="MhLabs.AwsCliSso" Version="0.0.3" />
     <PackageReference Include="microsoft.aspnetcore.hosting.abstractions" Version="1.1.3" />
   </ItemGroup>
 
