@@ -27,6 +27,10 @@ namespace MhLabs.AwsLambdaLocal
             {
                 var service = new AwsCliSsoService(region);
                 credentials = await service.GetCredentials(startUrl, accountId ?? System.Environment.GetEnvironmentVariable("AWS_SSO_ACCOUNT_ID"), roleName ?? System.Environment.GetEnvironmentVariable("AWS_SSO_LAMBDA_LOCAL_ROLE_NAME"));
+                var immutableCredentials = credentials.GetCredentials();
+                System.Environment.SetEnvironmentVariable("AWS_ACCESS_KEY_ID", immutableCredentials.AccessKey);
+                System.Environment.SetEnvironmentVariable("AWS_SECRET_ACCESS_KEY", immutableCredentials.SecretKey);
+                System.Environment.SetEnvironmentVariable("AWS_SESSION_TOKEN", immutableCredentials.Token);
                 cloudFormation = new AmazonCloudFormationClient(credentials, region);
                 lambdaClient = new AmazonLambdaClient(credentials, region);
             }
