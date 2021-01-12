@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>2.0.3</Version>
+    <Version>2.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="awssdk.cloudformation" Version="3.3.9" />
-    <PackageReference Include="awssdk.lambda" Version="3.3.10" />
-    <PackageReference Include="MhLabs.AwsCliSso" Version="0.0.3" />
-    <PackageReference Include="microsoft.aspnetcore.hosting.abstractions" Version="1.1.3" />
+    <PackageReference Include="awssdk.cloudformation" Version="3.5.2.17" />
+    <PackageReference Include="awssdk.lambda" Version="3.5.6.10" />
+    <PackageReference Include="MhLabs.AwsCliSso" Version="0.0.4" />
+    <PackageReference Include="microsoft.aspnetcore.hosting.abstractions" Version="2.2.0" />
   </ItemGroup>
 
 </Project>
