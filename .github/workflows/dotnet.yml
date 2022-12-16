@@ -26,4 +26,4 @@ jobs:
         run: pwd
         
       - name: Publish to GitHub packages 
-        run: dotnet nuget push /home/runner/work/MhLabs.AwsLambdaLocal/MhLabs.AwsLambdaLocal/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+        run: dotnet nuget push /home/runner/work/MhLabs.AwsLambdaLocal/MhLabs.AwsLambdaLocal/MhLabs.AWSLambdaLocal/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
