@@ -17,8 +17,9 @@ jobs:
 
       # Publish nuget package
       - name: Pack
-        run: pwd
-        #run: dotnet pack MhLabs.AWSLambdaLocal/MhLabs.AwsLambdaLocal.csproj -c Release
+        run: dotnet pack MhLabs.AwsLambdaLocal.csproj -c Release
+      - name: list dir
+        run: ls -ltr
 
       #- name: Publish to GitHub packages 
         #run: dotnet nuget push /home/runner/work/EasyDbMigrator/EasyDbMigrator/EasyDbMigrator/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate`
