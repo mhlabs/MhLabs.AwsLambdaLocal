@@ -18,12 +18,6 @@ jobs:
       # Publish nuget package
       - name: Pack
         run: dotnet pack MhLabs.AWSLambdaLocal/MhLabs.AwsLambdaLocal.csproj -c Release
-        
-      - name: list files
-        run: ls -ltr
-
-      - name: current dir
-        run: pwd
-        
+                
       - name: Publish to GitHub packages 
         run: dotnet nuget push /home/runner/work/MhLabs.AwsLambdaLocal/MhLabs.AwsLambdaLocal/MhLabs.AWSLambdaLocal/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
