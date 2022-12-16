@@ -16,8 +16,8 @@ jobs:
           dotnet-version: 6.0.x
 
       # Publish nuget package
-      - name: Pack
-        run: dotnet pack MhLabs.AwsLambdaLocal.csproj -c Release
+      #- name: Pack
+       # run: dotnet pack MhLabs.AwsLambdaLocal.csproj -c Release
       - name: list dir
         run: ls -ltr
 
